@@ -34,33 +34,56 @@ filter_unmatched_urls = true
 [colors]
 #cursor = #dcdccc
 #cursor_foreground = #dcdccc
-foreground = #dcdccc
-foreground_bold = #ffffff
+#foreground = #dcdccc
+#foreground_bold = #ffffff
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.5)
+background = rgba(1, 1, 1, 0.8)
 
 # if unset, will reverse foreground and background
 highlight = #2f2f2f
 
 # colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #0b1c2c
+color8  = #627e99
+color7  = #cbd6e2
+color15 = #f7f9fb
+
+# Red
+color1  = #bf8b56
+color9  = #bf8b56
+
+# Green
+color2  = #56bf8b
+color10 = #56bf8b
+
+# Yellow
+color3  = #8bbf56
+color11 = #8bbf56
+
+# Blue
+color4  = #8b56bf
+color12 = #8b56bf
+
+# Purple
+color5  = #bf568b
+color13 = #bf568b
+
+# Teal
+color6  = #568bbf
+color14 = #568bbf
+
+# Extra colors
+color16 = #bfbf56
+color17 = #bf5656
+color18 = #223b54
+color19 = #405c79
+color20 = #aabcce
+color21 = #e5ebf1
 
 [hints]
 #font = Monospace 12
