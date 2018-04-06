@@ -1,0 +1,5 @@
+# Activar mic
+# i just to add -d device --source set-volume my-value
+
+ponymix -d alsa_input.pci-0000_00_14.2.analog-stereo --source toggle
+
