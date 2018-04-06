@@ -14,7 +14,7 @@ Entre muchas otras cosas más que tengo instaladas para poder personalizar al m�
 
 También podemos hablar en los grupos de **GNU/Linux** en **Telegram**:
 
-[LinuxerOS](https://t.me/Linuxeros_es)
+[LinuxerOS](https://t.me/LinuxerOS_es)
 
 [ArchlinuxLatinoamerica](https://t.me/ArchlinuxlatinoAmerica)
 
@@ -28,8 +28,5 @@ También podemos hablar en los grupos de **GNU/Linux** en **Telegram**:
 
 [Unix](https://t.ne/unix_es)
 
-[VoidLinux](https://t.me/VoidLinux_es)
-
-[LineageOS](https://t.me/LineageOS_es)
 
 Y sinó también pueden visitarme para más tutoriales en mi blog de [LinuxForAllSite](https://linuxforallsite.wordpress.com/).
