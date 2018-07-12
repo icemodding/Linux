@@ -1,0 +1,76 @@
+###############################################
+#   ____                      _              
+#  / ___|___  _ __ ___  _ __ | |_ ___  _ __  
+# | |   / _ \| '_ ` _ \| '_ \| __/ _ \| '_ \  
+# | |__| (_) | | | | | | |_) | || (_) | | | |
+#  \____\___/|_| |_| |_| .__/ \__\___/|_| |_|
+#                      |_|                    
+###############################################
+#
+# Shadow
+shadow = true;                  # Enabled client-side shadows on windows.
+no-dock-shadow = true;          # Avoid drawing shadows on dock/panel windows.
+no-dnd-shadow = true;           # Don't draw shadows on DND windows.
+clear-shadow = true;            # Zero the part of the shadow's mask behind the
+ 
+shadow-radius = 7;              # The blur radius for shadows. (default 12)
+shadow-offset-x = -7;           # The left offset for shadows. (default -15)
+shadow-offset-y = -7;           # The top offset for shadows. (default -15)
+ 
+shadow-blue = 0.9;              # Blue color value of shadow. (0.0 - 1.0, defaults to 0)
+shadow-exclude = [ "n:e:Notification" ]; # Exclude conditions for shadows.
+shadow-ignore-shaped = true;    # Avoid drawing shadow on all shaped windows
+ 
+# Opacity
+menu-opacity = 0.9;             # The opacity for menus. (default 1.0)
+inactive-opacity = 0.9;         # Default opacity of inactive windows. (0.0 - 1.0)
+ 
+alpha-step = 0.06;              # XRender backend: Step size for alpha pictures. Increasing
+ 
+blur-background-fixed = false;  # Do not let blur radius adjust based on window opacity.
+blur-background-exclude = [ "window_type = 'dock'", "window_type = 'desktop'" ];
+ 
+# Fading
+fading = true;                  # Fade windows during opacity changes.
+fade-in-step = 0.03;            # Opacity change between steps while fading in. (default 0.028).
+fade-out-step = 0.03;           # Opacity change between steps while fading out. (default 0.03).
+fade-exclude = [ ];             # Exclude conditions for fading.
+ 
+# Other
+backend = "xrender"             # Backend to use: "xrender" or "glx". GLX backend is typically
+ 
+mark-wmwin-focused = true;      # Try to detect WM windows and mark them as active.
+mark-ovredir-focused = true;    # Mark all non-WM but override-redirect windows active (e.g. menus).
+use-ewmh-active-win = false;    # Use EWMH _NET_WM_ACTIVE_WINDOW to determine which window is focused
+ 
+detect-rounded-corners = true;  # Detect rounded corners and treat them as rectangular when --shadow-ignore- shaped is on.
+detect-client-opacity = true;   # Detect _NET_WM_OPACITY on client windows, useful for window
+ 
+# windows.
+refresh-rate = 0;               # For --sw-opti: Specify refresh rate of the screen. 0 for auto.
+vsync = "none";                 # "none", "drm", "opengl", "opengl-oml", "opengl-swc", "opengl-mswc"
+ 
+dbe = false;                    # Enable DBE painting mode. Rarely needed.
+paint-on-overlay = false;       # Painting on X Composite overlay window. Recommended.
+sw-opti = false;                # Limit compton to repaint at most once every 1 / refresh_rate.
+ 
+unredir-if-possible = true;     # Unredirect all windows if a full-screen opaque window is
+ 
+focus-exclude = [ ];            # A list of conditions of windows that should always be considered
+ 
+detect-transient = true;        # Use WM_TRANSIENT_FOR to group windows, and consider windows in
+ 
+detect-client-leader = true;    # Use WM_CLIENT_LEADER to group windows.
+invert-color-include = [ ];     # Conditions for windows to be painted with inverted color.
+ 
+glx-copy-from-front = false;    # Useful with --glx-swap-method,
+glx-swap-method = "exchange";   # See man page.
+ 
+# Window type settings
+wintypes:
+{
+  tooltip = { fade = true; shadow = false; opacity = 0.75; focus = true; };
+  # fade: Fade the particular type of windows.
+  # shadow: Give those windows shadow
+  # opacity: Default opacity for the type of windows.
+  # focus: Whether to always consider windows of this type focused.
