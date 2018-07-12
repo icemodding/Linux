@@ -1,8 +1,8 @@
 #!/bin/bash
 # Modo de uso:
-# sudo sh clean_cache.sh
+# sudo sh liberar_cache.sh
 # by ice
-# Grupo Linux: http://t.me/Linuxeros_es
+# Grupo Linux: http://t.me/LinuxerOS_es
 # Blog: https://linuxforallsite.wordpress.com
 
 echo "****************************************"
