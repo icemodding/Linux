@@ -27,9 +27,10 @@
 ## The proxy will automatically pick the fastest, working servers from the list.
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-#server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
-
+# server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
+# server_names = ['dnscrypt.eu-nl']
 server_names = ['dnscrypt.eu-dk']
+
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
 ## Note: When using systemd socket activation, choose an empty set (i.e. [] ).
@@ -119,9 +120,14 @@ keepalive = 30
 refused_code_in_responses = false
 
 
-## Load-balancing strategy: 'p2' (default), 'ph', 'fastest' or 'random'
+## Load-balancing strategy: 'p2' (default), 'ph', 'first' or 'random'
 
 # lb_strategy = 'p2'
+
+## Set to `true` to constantly try to estimate the latency of all the resolvers
+## and adjust the load-balancing parameters accordingly, or to `false` to disable.
+
+# lb_estimator = true
 
 
 ## Log level (0-6, default: 2 - 0 is very verbose, 6 only contains fatal errors)
@@ -199,9 +205,21 @@ ignore_system_dns = false
 ## initializing the proxy.
 ## Useful if the proxy is automatically started at boot, and network
 ## connectivity is not guaranteed to be immediately available.
-## Use 0 to disable.
+## Use 0 to not test for connectivity at all,
+## and -1 to wait as much as possible.
 
 netprobe_timeout = 60
+
+## Address and port to try initializing a connection to, just to check
+## if the network is up. It can be any address and any port, even if
+## there is nothing answering these on the other side. Just don't use
+## a local address, as the goal is to check for Internet connectivity.
+## On Windows, a datagram with a single, nul byte will be sent, only
+## when the system starts.
+## On other operating systems, the connection will be initialized
+## but nothing will be sent at all.
+
+netprobe_address = "9.9.9.9:53"
 
 
 ## Offline mode - Do not use any remote encrypted servers.
@@ -526,6 +544,12 @@ cache_neg_max_ttl = 600
 ## Mostly useful for testing your own servers.
 
 [static]
+
+  # [static.'google']
+  # stamp = 'sdns://AgUAAAAAAAAAAAAOZG5zLmdvb2dsZS5jb20NL2V4cGVyaW1lbnRhbA'
+
+  # [static.'dnscrypt.eu-nl']
+  # stamp = 'sdns://AQcAAAAAAAAADjE3Ni41Ni4yMzcuMTcxIGfADywhxVSBRd18tGonGvLrlpkxQKMJtiuNFlMRhZxmJTIuZG5zY3J5cHQtY2VydC5yZXNvbHZlcjEuZG5zY3J5cHQuZXU'
 
   [static.'dnscrypt.eu-dk']
   stamp = 'sdns://AQcAAAAAAAAADDc3LjY2Ljg0LjIzMyA3SFWF47nQiP0lrTawNwH1UgzWSJ6a3VIUV0lVnwqZVSUyLmRuc2NyeXB0LWNlcnQucmVzb2x2ZXIyLmRuc2NyeXB0LmV1'
