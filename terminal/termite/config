@@ -4,7 +4,7 @@ scroll_on_keystroke = true
 audible_bell = false
 mouse_autohide = true
 allow_bold = true
-#dynamic_title = true
+dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
 font = Monospace 8
@@ -39,7 +39,7 @@ filter_unmatched_urls = true
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(1, 1, 1, 0.8)
+background = rgba(1, 1, 1, 0.7)
 
 # if unset, will reverse foreground and background
 highlight = #2f2f2f
