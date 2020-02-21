@@ -1,7 +1,7 @@
 ! Enable the extended coloring options
 rofi.color-enabled: true
 !                  bg             border   separator
-rofi.color-window: argb:992f343f, argb:00000000,  argb:00000000,
+rofi.color-window: argb:992f343f, argb:00000000,  900000,
 !                  bg             fg       bg-alt   hl-bg    hl-fg
 rofi.color-normal: argb:00000000, #FFFFFF, 000000, 000000,   #f8ae19
 rofi.color-active: argb:00000000, #FFFFFF, argb:00000000,   argb:00000000, #f8ae19
