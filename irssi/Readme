@@ -1,1 +1,3 @@
 Debemos copiar los archivos .theme a ~/.irssi/ y luego los cargamos con la orden /set theme nombre_del_theme
+
+web de todos los themes: https://irssi-import.github.io/themes/
